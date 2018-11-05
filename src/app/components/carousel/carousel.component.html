@@ -1,0 +1,23 @@
+<section class="carousel">
+        <div class="overlay"></div>
+        <ngb-carousel *ngIf="images"  [showNavigationIndicators]="showNavigationIndicators" [showNavigationArrows]="showNavigationArrows">
+            <ng-template ngbSlide *ngFor="let image of images">
+              <img [src]="image" alt="Muebles San Pedro, Muebles personalizados">
+            </ng-template>   
+          </ngb-carousel>
+    <div>      
+        <div class="card">
+      
+          <div class="header">
+            <ng-content select="[header]"></ng-content>
+          </div>
+      
+        </div>
+      
+      </div>
+
+
+
+  </section>
+
+  

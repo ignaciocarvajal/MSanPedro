@@ -1,0 +1,69 @@
+<app-carousel>
+    <div header>
+        <div class="carousel-caption">
+           <h1 >Contacto</h1>
+           <p class="breadcrumbs">
+             <span class="mr-2">
+               <a routerLink="/inicio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+             </span> 
+             <span>Contacto</span>
+           </p>
+         </div>
+   </div>
+</app-carousel>
+<section class="ftco-section contact-section">
+  <div class="container">
+    <div class="row d-flex mb-5 contact-info">
+      <div class="col-md-12 mb-4">
+        <h2 class="h4">Informacion de Contacto</h2>
+      </div>
+      <div class="w-100"></div>
+      <div class="col-md-3">
+        <p> <span>Direccion: </span> Av. Alejandro Urrutia #0124, Cajon, Temuco, IX Región </p>
+      </div>
+      <div class="col-md-3">
+        <p>   <span>Telefono: </span> <a href="tel://+56995131792"> + 569-95131792</a></p>
+      </div>
+      <div class="col-md-3">
+        <p>  <span>Email: </span> <a href="mailto:pedrozambro.muebles@gmail.com">pedrozambro.muebles@gmail.com</a></p>
+      </div>
+      <div class="col-md-3">
+        <p> <span>Sitio web: </span> <a routerLink="/inicio">mueblessanpedro.cl</a></p>
+      </div>
+    </div>
+    <div class="row block-9">
+      <div class="col-md-6 order-md-last pr-md-5">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div class="form-group">
+            <input type="text" class="form-control" ngModel name="name" placeholder="Nombre" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Tu Email"  ngModel name="email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Asunto" ngModel name="subject" required>
+          </div>
+          <div class="form-group">
+            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Mensaje"  ngModel name="content" required></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit"  [disabled]="!f.valid" value="Send Message" class="btn btn-primary py-3 px-5">
+          </div>
+        </form>
+      
+      </div>
+
+      <div class="col-md-6 map">
+        <agm-map class="z-depth-1-half map-container" style="height: 370px;" 
+        [latitude]="map.lat" 
+        [longitude]="map.lng" 
+        [zoom]="zoom"
+        [disableDefaultUI]="false"
+        [zoomControl]="true"
+        >
+          <agm-marker [latitude]="map.lat" [longitude]="map.lng"  [label]="map.label"></agm-marker>
+      </agm-map>
+      </div>
+    </div>
+  </div>
+</section>

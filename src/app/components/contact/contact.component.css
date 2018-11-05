@@ -1,0 +1,28 @@
+h1{
+    color: aliceblue;
+}
+
+a {
+    transition: .3s all ease;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-caption {
+    bottom: 32rem;
+}
+
+input.ng-invalid.ng-touched {
+    border-bottom: 1px solid red;
+}
+
+input.ng-valid.ng-touched {
+    border-bottom: 1px solid green;
+}
+
+text.ng-invalid.ng-touched {
+    border-bottom: 1px solid red;
+}
+
+text.ng-valid.ng-touched {
+    border-bottom: 1px solid green;
+}

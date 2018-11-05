@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container fixed-top">
+    <a class="navbar-brand" routerLink="/inicio">Muebles San Pedro</a>
+    <button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="ftco-nav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span> 
+    </button>
+
+    <div class="collapse navbar-collapse" id="ftco-nav" [ngbCollapse]="isCollapsed"  [class.sticky] = "sticky">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a  routerLink="/inicio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/nosotros"  [routerLinkActive]="['active']" class="nav-link">Nosotros</a></li>
+        <li class="nav-item">
+          <a routerLink="/servicios"  [routerLinkActive]="['active']" class="nav-link">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/contacto"  [routerLinkActive]="['active']" class="nav-link">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END nav -->
