@@ -22,7 +22,6 @@ export class CarouselComponent implements OnInit {
     './assets/img/image-02.jpg',
     './assets/img/image-03.jpg',
     './assets/img/image-04.jpg',
-    './assets/img/image-05.jpg',
     './assets/img/image-06.jpg',
   ];
 

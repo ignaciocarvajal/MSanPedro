@@ -20,7 +20,7 @@ export class ContactComponent implements OnInit {
   onSubmit(form: NgForm){
     const value = form.value;
     const name = value.name;
-    const email = 'ignaciocarvajald@gmail.com';
+    const email = 'pedrozambro.muebles@gmail.com';
     const message = value.content;
     const subject = value.subject;
     const emailContact = value.email;
